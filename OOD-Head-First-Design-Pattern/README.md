@@ -12,3 +12,4 @@
 10. the Proxy Pattern 代理模式
 11. Compound Patterns 复合模式
 
+Please fill out the presenter list: https://docs.google.com/spreadsheets/d/1L1sKpyhTEuSj9oeivEiZ3RyX_igH-fCN5esGVHiJSVU/edit?usp=sharing
