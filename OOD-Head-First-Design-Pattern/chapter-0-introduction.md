@@ -1,4 +1,51 @@
-### OOD and System Design
+
+## 1. What is OOD
+</br>
+
+> OOA + OOD + OOP = 面对对象方法
+
+面向对象开发方法将面向对象的思想应用于软件开发过程中，是建立在“对象”概念基础上的方法学，简称OO( Object-Oriented)方法。面向对象方法的本质是主张参照人们认识一个现实系统的方法，完成分析、设计与实现一个软件系统，提倡用人类在现实生活中常用的思维方法来认识和理解描述客观事物，建立对象之间的关系。我们平时用的都是OOD编程。
+
+</br>
+</br>
+
+## 2. Other Programming Philosophy
+
+</br>
+
+i. Functional Programming
+
+Scheme
+```Scheme
+(define (hofstadter-male-female n)
+  (letrec ((female (lambda (n)
+		     (if (= n 0)
+			 1
+			 (- n (male (female (- n 1)))))))
+	   (male (lambda (n)
+		   (if (= n 0)
+		       0
+		       (- n (female (male (- n 1))))))))
+    (let loop ((i 0))
+      (if (> i n)
+	  '()
+	  (cons (cons (female i)
+		      (male i))
+		(loop (+ i 1)))))))
+
+(hofstadter-male-female 8)
+```
+
+</br>
+
+ii. Data-Oriented Programming (DOP)
+
+[戴森球计划](https://indienova.com/indie-game-development/dyson-sphere-devlog-4/)
+
+</br>
+</br>
+
+## 3. OOD and System Design
 <br/>
 
 |  | OOD | System Design |
@@ -10,8 +57,9 @@
 | 例题 | Design Parking Lot | Design Tiny URL |
 | 如何区分 | 一定是单机，围绕类与类的关系 | 一定会提到分布式系统，重点在稳定性和延展性 |
 <br/>
+</br>
 
-### Java Quick Start
+## 4. Java Quick Start
 <br/>
 
 **i. `Class`**
@@ -141,20 +189,21 @@ myPet(it);
 设计原则：多用组合(composition)，少用继承(inheritance)
 
 </br>
+</br>
 
-### Example: Duck
+## 5. Example: Duck
 </br>
 Considering `Duck` as a specie, we have three subspecies of `Duck`: MallardDuck, ReadheadDuck, RubberDuck
 
 </br>
 
-If we use inheritence as following, we grant flying ability to all ducks, including those that shoudn't (RubberDuck)
+If we use inheritence as following, we will grant flying ability to all ducks, including those that shoudn't (RubberDuck)
 
 ![Duck extend UML](./image/chapter-0/duck-extend-UML.png)
 
 </br>
 
-If we use interface, the problem is we need to implements each interface multiple times for all these ducks (a lot of redundent work).
+If we use interface, the problem is we need to implement each interface multiple times for all these ducks (a lot of redundent work).
 ![Duck interface UML](./image/chapter-0/duck-interface-UML.png)
 
 </br>
