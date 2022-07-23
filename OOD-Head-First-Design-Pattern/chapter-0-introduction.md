@@ -42,6 +42,9 @@ ii. Data-Oriented Programming (DOP)
 
 [戴森球计划](https://indienova.com/indie-game-development/dyson-sphere-devlog-4/)
 
+![DOP](./image/chapter-0/DOP-sample.png)
+
+
 </br>
 </br>
 
@@ -276,16 +279,24 @@ public class ModelDuck extends Duck {
     }
 
     void setFlyBehavior(FlyBehavior flyBehavior) {
-        this.flyBehavior = flyBehavior
+        this.flyBehavior = flyBehavior;
     }
 
     void setQuackBehavior(QuackBehavior quackBehavior) {
-        this.quackBehavior = quackBehavior
+        this.quackBehavior = quackBehavior;
     }
 }
 ```
 
+```Java
+ModelDuck myDuck = new ModelDuck();
+FlyBehavior noFly = new FlyNoWay(); // 多态
+
+myDuck.setFlyBehavior(noFly);
+myDuck.fly();
+```
+
 </br>
 
-Overall UML diagram
+Overall UML diagram, this design pattern is called `Strategy Pattern`.
 ![Duck UML](./image/chapter-0/duck-UML.png)
