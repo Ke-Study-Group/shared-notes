@@ -1,1 +1,1 @@
-## Chapter 2: Decorater Pattern 装饰着模式
+## Chapter 2: Decorator Pattern 装饰者模式

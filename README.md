@@ -3,13 +3,16 @@
 Only internal users are intended for this repository. 
 </br>
 </br>
+
 ## How to submit pull request
 
-create and submit：[guide](https://chinese.freecodecamp.org/news/how-to-make-your-first-pull-request-on-github/)
+</br>
 
-merge: by yourself.
+please look at our [video tutorial](https://drive.google.com/file/d/1YTgeZ23NhyUUaTcSB9exWecyQiajZGQ-/view?usp=sharing)
+
 </br>
 </br>
+
 ## Markdown
 
 It is recommended to use [Markdown](https://www.markdownguide.org/cheat-sheet/) format in notes.
