@@ -1,7 +1,7 @@
 # Head First Design Pattern
 
  - [x] 1. the Observer Pattern 观察者模式
- - [ ] 2. the Decorator Pattern 装饰者模式
+ - [x] 2. the Decorator Pattern 装饰者模式
  - [ ] 3. the Factory Pattern 工厂模式
  - [ ] 4. the Singleton Pattern 单件模式
  - [ ] 5. the Command Pattern 命令模式
