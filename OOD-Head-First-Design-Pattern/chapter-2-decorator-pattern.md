@@ -241,7 +241,8 @@ Java 的 IO 结构，FilterInputStream 就是一个装饰者
 ![JAVAIO](./image/chapter-2/3-2.jpg)
 </br>
 
-应用：大写转换为小写
+应用：大写转换为小写的输入输出流
+
 ```Java
 import java.io.FileInputStream;
 import java.io.FilterInputStream;
@@ -249,44 +250,41 @@ import java.io.IOException;
 import java.io.InputStream;
 
 public class Demo {
-	public static void main(String[] args) {
-		try {
-			ToLowerInputStream in = new ToLowerInputStream(new FileInputStream(".\\iotest.txt"));
-			int c;
-			while((c = in.read()) != -1) {
-				System.out.print((char) c);			
-			}
-			in.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
+    public static void main(String[] args) {
+        try {
+            ToLowerInputStream in = new ToLowerInputStream(new FileInputStream(".\\test.txt"));
+            int c;
+            while ((c = in.read()) != -1) {
+                System.out.print((char) c);
+            }
+            in.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
- 
- 
-/** 
-* 转小写字母
-*/ 
-class ToLowerInputStream extends FilterInputStream{
- 
-	protected ToLowerInputStream(InputStream arg0) {
-		super(arg0);
-		// TODO Auto-generated constructor stub
-	}
-	
-	public int read() throws IOException {
-		int c = 0;
+```
+
+自定义转小写字母的读写流
+```Java
+class ToLowerInputStream extends FilterInputStream {
+    protected ToLowerInputStream(InputStream arg0) {
+        super(arg0);
+        // other initialization
+    }
+
+    public int read() throws IOException {
+        int c = 0;
         if ((c = super.read()) != -1) {
-            if (Character.isUpperCase(c)) {//把大写字母转成小写
+            if (Character.isUpperCase(c)) { // 把大写转换成小写
                 return Character.toLowerCase(c);
-            } else {//其他保持
-                return c;				
-            }			
+            } else { //其他不变
+                return c;
+            }
+        } else {
+            return -1;
         }
-        else {
-            return -1;			
-        }
-	}	
+    }
 }
 ```
 
