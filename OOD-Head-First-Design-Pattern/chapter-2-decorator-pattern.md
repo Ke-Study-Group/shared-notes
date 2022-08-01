@@ -100,26 +100,27 @@
 </br>
 
 AbstractDrink 源码示例：
+
 ```Java
 public abstract class AbstractDrink {
  
     public String des; // 描述
     private float price = 0.0f;
  
+    public void setDes(String des) {
+        this.des = des;
+    }
+
     public String getDes() {
         return des;
     }
- 
-    public void setDes(String des) {
-        this.des = des;
+
+    public void setPrice(float price) {
+        this.price = price;
     }
  
     public float getPrice() {
         return price;
-    }
- 
-    public void setPrice(float price) {
-        this.price = price;
     }
  
     // 计算费用的抽象方法
@@ -127,6 +128,7 @@ public abstract class AbstractDrink {
     public abstract float cost();
 }
 ```
+
 Coffee 源码示例：
 ```Java
 public class Coffee extends AbstractDrink {
@@ -136,15 +138,17 @@ public class Coffee extends AbstractDrink {
     }
 }
 ```
+
 Espresso 源码示例：
 ```Java
-public final class Espresso extends Coffee {
-    public Espresso() {
-        setDes(" 意大利咖啡 ");
+public final class LongBlack extends Coffee {
+    public LongBlack() {
+        setDes(" 澳式黑咖啡 ");
         setPrice(6.0f);
     }
 }
 ```
+
 Decorator 源码示例：
 ```Java
 public class Decorator extends AbstractDrink {
@@ -153,6 +157,7 @@ public class Decorator extends AbstractDrink {
     public Decorator(AbstractDrink drink) { // 组合
         this.drink = drink;
     }
+
     @Override
     public float cost() {
         // getPrice 自己价格
@@ -242,19 +247,14 @@ import java.io.FileInputStream;
 import java.io.FilterInputStream;
 import java.io.IOException;
 import java.io.InputStream;
- 
-/** 
-* @author my: 
-* @version 2020-09-07 
-* IO流实现机制练习（装饰者模式）
-*/ 
-public class Demo_1 {
-	public static void main(String[] args){
+
+public class Demo {
+	public static void main(String[] args) {
 		try {
 			ToLowerInputStream in = new ToLowerInputStream(new FileInputStream(".\\iotest.txt"));
 			int c;
-			while((c = in.read()) != -1){
-				System.out.print((char)c);			
+			while((c = in.read()) != -1) {
+				System.out.print((char) c);			
 			}
 			in.close();
 		} catch (IOException e) {
@@ -274,24 +274,21 @@ class ToLowerInputStream extends FilterInputStream{
 		// TODO Auto-generated constructor stub
 	}
 	
-	public int read() throws IOException{
+	public int read() throws IOException {
 		int c = 0;
-			if((c = super.read()) != -1){
-				if(Character.isUpperCase(c)){//把大写字母转成小写
-					return Character.toLowerCase(c);
-				}else{//其他保持
-					return c;				
-				}			
-			}
-			else{
-				return -1;			
-			}
-	}
-	
-	
+        if ((c = super.read()) != -1) {
+            if (Character.isUpperCase(c)) {//把大写字母转成小写
+                return Character.toLowerCase(c);
+            } else {//其他保持
+                return c;				
+            }			
+        }
+        else {
+            return -1;			
+        }
+	}	
 }
 ```
-
 
 </br>
 
@@ -332,5 +329,10 @@ class ToLowerInputStream extends FilterInputStream{
 > 1. 换衣小游戏，人还是那个人，不断给她换衣服，还可以一层套一层的
 > 1. 孙悟空有72变，变成什么后就有了它的功能，但本质还是一只猴子
 
+</br>
+
 ## 6. References
+
+</br>
+
 [设计模式 —— 装饰者模式](https://blog.csdn.net/weixin_32265569/article/details/108355392?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522165919192416781683923106%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=165919192416781683923106&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-108355392-null-null.142^v35^pc_search_result_control_group&utm_term=%E8%A3%85%E9%A5%B0%E6%A8%A1%E5%BC%8F&spm=1018.2226.3001.4187)
