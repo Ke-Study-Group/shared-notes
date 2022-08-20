@@ -129,7 +129,7 @@ public class Singleton {
 ```
 </br>
 
-## 4. Advantages
+## 4. Pros/Cons
 优点： 
     
     1.只有一个instance，确保所有的object都访问一个instance 
