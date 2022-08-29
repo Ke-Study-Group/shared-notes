@@ -4,7 +4,7 @@
  - [x] 2. the Decorator Pattern 装饰者模式
  - [ ] 3. the Factory Pattern 工厂模式
  - [x] 4. the Singleton Pattern 单件模式
- - [ ] 5. the Command Pattern 命令模式
+ - [x] 5. the Command Pattern 命令模式
  - [ ] 6. the Adapter and Facade Patterns 适配器与外观模式
  - [ ] 7. theTemplate Method Pattern 模版方法模式
  - [ ] 8. the Iterator and Composite Patterns 迭代器与组合模式
