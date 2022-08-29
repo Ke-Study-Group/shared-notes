@@ -1,4 +1,7 @@
 ## Chapter 1: Observer Pattern 观察者模式
+
+</br>
+
 <div align=center>
 	<img src="./image/chapter-1/design-pattern-overview.png" width="">
 </div>
