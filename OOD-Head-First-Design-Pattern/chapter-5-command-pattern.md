@@ -1,4 +1,7 @@
 ## Chapter 5: Command Pattern 命令模式
+
+</br>
+
 <div align=center>
 	<img src="./image/chapter-2/design-pattern-overview.png" width="">
 </div>
@@ -6,6 +9,7 @@
 </br>
 在软件设计中，我们经常需要向某些对象发送请求，但是并不知道请求的接收者是谁，也不知道被请求的操作是哪个，我们只需在程序运行时指定具体的请求接收者即可，此时，可以使用命令模式来进行设计，使得请求发送者与请求接收者消除彼此之间的耦合，让对象之间的调用关系更加灵活。
 
+</br>
 </br>
 
 > 核心：解耦调用操作的对象(invoker)和提供实现的对象(receiver)
@@ -21,6 +25,7 @@
 </br>
 
 以餐厅点单为例
+
 ![Order Example](./image/chapter-5/order-example.png)
 
 </br>
@@ -50,6 +55,7 @@
 </br>
 
 时序图
+
 ![Sequence UML](./image/chapter-5/sequence-uml.jpeg)
 
 </br>
@@ -202,6 +208,7 @@ public static void main(String[] args) {
 </br>
 
 ![Java Runnable](./image/chapter-5/java-runnable.png)
+
 Runnable：任务抽象，也就是“命令”；线程池通过execute调用该run方法
 
 </br>

@@ -1,4 +1,7 @@
 ## Chapter 4: Singleton Pattern 单件模式
+
+</br>
+
 <div align=center>
 	<img src="./image/chapter-2/design-pattern-overview.png" width="">
 </div>
