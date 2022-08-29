@@ -1,6 +1,6 @@
 ## Chapter 2: Decorator Pattern 装饰（者）模式
 <div align=center>
-	<img src="./image/chapter-2/0.jpg" width="">
+	<img src="./image/chapter-2/design-pattern-overview.png" width="">
 </div>
 
 
