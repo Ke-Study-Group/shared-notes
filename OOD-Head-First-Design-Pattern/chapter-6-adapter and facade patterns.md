@@ -164,11 +164,11 @@ public class DuckTestDrive {
 
 </br>
 
-![Design UML](./image/chapter-6/3-2.png)
+![Design UML](./image/chapter-6/3-1.png)
 
 </br>
 
-![Design UML](./image/chapter-6/3-3.png)
+![Design UML](./image/chapter-6/3-2.png)
 
 
 
@@ -187,7 +187,7 @@ public class DuckTestDrive {
 
 </br>
 
-![Design UML](./image/chapter-6/3-6.png)
+![Design UML](./image/chapter-6/3-3.png)
 
 </br>
 
@@ -431,7 +431,7 @@ public class HomeTheaterTestDrive {
 
 </br>
 
-![Design UML](./image/chapter-6/4-6.png)
+![Design UML](./image/chapter-6/4-5.png)
 
 </br>
 
@@ -439,6 +439,6 @@ public class HomeTheaterTestDrive {
 
 外观模式中最少知识原则的体现
 
-![Design UML](./image/chapter-6/4-7.png)
+![Design UML](./image/chapter-6/4-6.png)
 
 </br>
