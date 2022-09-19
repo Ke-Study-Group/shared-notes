@@ -214,3 +214,95 @@ public class CoffeeWithHook extends CaffeineBeverageWithHook {
 模板方法定义了算法的步骤，把这些步骤的实现延迟到了子类模板方法提供了一种代码复用的技巧模板方法的抽象可以定义抽象方法、具体方法和钩子。钩子是一种方法，它在抽象类中不做任何事情 ，或者只做默认的事情，子类可以选择要不要去覆盖它。为防止子类修改模板方法，可以将模板方法定义为final。将决策权放在高层模块中，以便决定何时调用底层组件，即模板方法中使用钩子函数判断是否调用某个方法。当子类“必须”提供算法中的某个方法或步骤的实现时，就使用抽象方法。如果算法的这个部分是可选的，就用钩子。
 
 </br>
+
+## 5 模版类
+1.函数模版
+​</br>
+
+```C++
+// 交换两个整型变量的值的Swap函数：
+void Swap(int & x,int & y)
+{
+    int tmp = x;
+    x = y;
+    y = tmp;
+}
+
+// 交换两个double型变量的值的Swap函数:
+void Swap(double & x,double & y)
+{
+    double tmp = x;
+    x = y;
+    y = tmp;
+}
+template <class 类型参数1，class 类型参数2，...>
+返回值类型 模板名 (形参表)
+{
+    函数体
+};
+/*具体 Swap 「函数模板」代码如下：template 就是模板定义的关键词，T 代表的是任意变量的类型。template <class T>*/
+void Swap(T & x,T & y)
+{
+    T tmp = x;
+    x = y;
+    y = tmp;
+}
+
+int main()
+{
+    int n = 1,m = 2;
+    Swap(n,m);    // 指定模板函数的变量类型为int
+
+    double f = 1.2,g = 2.3;
+    Swap<double>(f,g); // 指定模板函数的变量类型为double
+
+    return 0;
+}
+函数模版可以隐式调用
+
+```
+​</br>
+2.类模版
+​</br>
+
+```C++
+template <class 类型参数1，class 类型参数2，...> //类型参数表
+class 类模板名
+{
+   成员函数和成员变量
+};
+
+//只能显示调用
+类模板名<真实类型参数表> 对象名(构造函数实参表);
+
+// 类模板
+template <class T1, class T2>
+class Pair
+{
+public:
+    Pair(T1 k, T2 v):m_key(k),m_value(v) {};
+    bool operator < (const Pair<T1,T2> & p) const;
+private:
+    T1 m_key;
+    T2 m_value;
+};
+
+// 类模板里成员函数的写法
+template <class T1, class T2>
+bool Pair<T1,T2>::operator < (const Pair<T1,T2> &p) const
+{
+    return m_value < p.m_value;
+}
+
+int main()
+{
+    Pair<string,int> Astudent("Jay",20); 
+    Pair<string,int> Bstudent("Tom",21);
+
+    cout << (Astudent < Bstudent) << endl;
+
+    return 0;
+}
+
+```
+​</br>
