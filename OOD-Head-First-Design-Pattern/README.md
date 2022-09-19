@@ -6,8 +6,8 @@
  - [x] 4. the Singleton Pattern 单件模式
  - [x] 5. the Command Pattern 命令模式
  - [x] 6. the Adapter and Facade Patterns 适配器与外观模式
- - [ ] 7. theTemplate Method Pattern 模版方法模式
- - [ ] 8. the Iterator and Composite Patterns 迭代器与组合模式
+ - [x] 7. the Template Method Pattern 模版方法模式
+ - [x] 8. the Iterator and Composite Patterns 迭代器与组合模式
  - [ ] 9. the State Pattern 状态模式
  - [ ] 10. the Proxy Pattern 代理模式
  - [ ] 11. Compound Patterns 复合模式
