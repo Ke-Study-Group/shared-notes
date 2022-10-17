@@ -8,8 +8,7 @@
  - [x] 6. the Adapter and Facade Patterns 适配器与外观模式
  - [x] 7. the Template Method Pattern 模版方法模式
  - [x] 8. the Iterator and Composite Patterns 迭代器与组合模式
- - [ ] 9. the State Pattern 状态模式
+ - [x] 9. the State Pattern 状态模式
  - [ ] 10. the Proxy Pattern 代理模式
- - [ ] 11. Compound Patterns 复合模式
 
 Please fill out the [presenter list](https://docs.google.com/spreadsheets/d/1L1sKpyhTEuSj9oeivEiZ3RyX_igH-fCN5esGVHiJSVU/edit?usp=sharing), one presenter per chapter.
